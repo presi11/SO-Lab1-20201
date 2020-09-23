@@ -2,18 +2,21 @@
 #include<stdlib.h>
 #include<string.h>
 
-void comprimir(char *fname, char*fout);
+void comprimir(char *fname);
 
 int main(int argc, char *argv[]) {
 
-    comprimir(argv[1],argv[2]);
+    for(int i=1; i<argc; i++){
+        comprimir(argv[i]);
+        
+    }
     return(0);
-}
+ }
 
-void comprimir(char *fname, char*fout){
+void comprimir(char *fname){
     
     FILE *inFile = fopen(fname, "r");
-    FILE *outFile = fopen(fout, "w");
+    //FILE *outFile = fopen(fout, "w");
     char src[500];
     char count[50];
 
@@ -57,7 +60,7 @@ void comprimir(char *fname, char*fout){
     printf("%s", dest);
     //int x = strlen(dest);
     //printf("%d", x);
-    fwrite(dest, 2, sizeof(dest) , outFile );
+    //fwrite(dest, 2, sizeof(dest) , outFile );
     fclose(inFile);
-    fclose(outFile);
+    //fclose(outFile);
 }
