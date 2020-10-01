@@ -8,11 +8,7 @@ FILE *inFile;
 
 int main(int argc, char *argv[])
 { 
-  if (argc < 2)
-    {
-        exit(0);
-    }
-  
+
 //Iteramos para utilizar el wcat en mas de un archivo
   for(int i=1; i<argc; i++){
     leerArchivo(argv[i]);
@@ -32,7 +28,7 @@ if(inFile == NULL) {
 
 //Iteramos para imprirmir todas las lineas del archivo
 while( fgets ( data, 50, inFile ) != NULL ){
-      printf( "%s" , data ) ;
+      printf( "%s", data ) ;
 
   }
 
