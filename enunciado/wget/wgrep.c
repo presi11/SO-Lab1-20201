@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         char buffer[500];
         while (fgets(buffer, 500, stdin))
         {
-            //Comparo el buffer y me cadena ingresada a buscar  
+            //Comparo el buffer y mi cadena ingresada a buscar  
             if (strstr(buffer, str) != NULL)
             {
                 printf("%s", buffer);
@@ -61,5 +61,6 @@ void SearchInFile(char *fileName, char *str)
             printf("%s", line);
         }
     }
+    //Cerramos el archivo
     fclose(file);
 }
